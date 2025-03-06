@@ -1,0 +1,200 @@
+:root {
+    font-size : 100%;
+    font-family : system-ui, sans-serif;
+    scroll-behavior : smooth;
+  }
+  * , *::before , *::after {
+    margin : 0;
+    padding : 0;
+    border : 0;
+    box-sizing : border-box;
+    vertical-align : baseline;
+  }
+  *::before , *::after {
+    display : block;
+  }
+  img , picture , video , iframe , figure , canvas {
+    max-width : 100%;
+    display : block;
+    width : 100%;
+    height : initial;
+    object-fit : cover;
+    object-position : center center;
+  }
+  a {
+    display : block;
+    text-decoration : none;
+    color : inherit;
+    font :  inherit;
+  }
+  p a {
+    display : inline;
+  }
+  li , menu, summary {
+    list-style-type : none;
+  }
+  ol {
+    counter-reset : revert;
+  }
+  h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em , pre , code , mark , del {
+    font :  inherit;
+    text-decoration :  none;
+    color : inherit;
+    overflow-wrap : break-word;
+    text-wrap : pretty;
+  }
+  mark {
+    background-color : transparent;
+  }
+  blockquote::before , blockquote::after , q::before , q::after {
+    content : none;
+  }
+  form , input , textarea , select , button , label {
+    font :  inherit;
+    hyphens : auto;
+    background-color : transparent;
+    color : inherit;
+    display : block;
+    appearance : none;
+  }
+  fieldset {
+    border : none;
+  }
+  ::placeholder {
+    color : unset;
+  }
+  button , label {
+    cursor : pointer;
+  }
+  table , tr , td , th , tbody , thead , tfoot {
+    border-collapse : collapse;
+    border-spacing : 0;
+    font : inherit;
+  }
+  svg {
+    width : 100%;
+    display : block;
+    fill : currentColor;
+  }
+  body {
+    min-height : 100vh;
+    line-height : 1.5em;
+    color : inherit;
+    hyphens : auto;
+    font-smooth : always;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+  }
+
+  .gallery-photos{
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    background-color: rgb(222, 229, 231);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    
+    position: relative;
+  }
+  .gallery-photos .gallery-all{
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    /* border: 2px solid black; */
+    border-radius: 23px;
+    background: #e0e0e0;
+    box-shadow:  -7px 7px 14px #cacaca,
+                 7px -7px 14px #f6f6f6;
+  }
+  .gallery-photos .gallery-images{
+    /* border: 3px solid black; */
+    border-radius: 23px;
+    overflow: hidden;
+  }
+  .gallery-images .gallery-a{
+    border-radius: 23px;
+    transform: scale(1.3);
+    transition: all 1s ease;
+  }
+  .gallery-a:hover{
+    transform: scale(1);
+  }
+  .gallery-images .gallery-b{
+    border-radius: 23px;
+    transform: scale(1.3);
+    transition: all 1s ease;
+
+  }
+  .gallery-b:hover{
+    transform: scale(1);
+  }
+  .gallery-images .gallery-c{
+    border-radius: 23px;
+    transform: scale(1.3);
+    transition: all 1s ease;
+
+  }
+  .gallery-c:hover{
+    transform: scale(1);
+  }
+
+
+
+  .gallery-photos .gallery-visible{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    opacity: 0;
+    transform: scale(1.1);
+    pointer-events: none;
+    position: absolute;
+    transition: all 1s ease;
+  }
+  .gallery-visible.isActive{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
+    transform: scale(.9);
+    pointer-events: all;
+    position: absolute;
+    transition: all 1s ease;
+  }
+  .gallery-visible .visible-button{
+    width: 6rem;
+    min-height: 4rem;
+    border-radius: 23px;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #c7c7c7,
+                -8px -8px 16px #f9f9f9;
+  }
+  .visible-button:hover{
+    width: 6rem;
+    min-height: 4rem;
+    border-radius: 23px;
+    background: #e0e0e0;
+    box-shadow: inset 20px 20px 60px #d2cfcf,
+                inset -20px -20px 60px #ffffff;
+  }
+  
+  .gallery-visible .visible-photo{
+    border-radius: 25px;
+    width: 60%;
+  }
+
